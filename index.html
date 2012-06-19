@@ -8,188 +8,398 @@
     <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
 
-    <style type="text/css">
-      body {
-        background-image: url('img/groovepaper.png')
-      }
-      tr:hover {
-        background: #F7F7F7;
-      }
-      .table tr {
-        cursor: pointer;
-        cursor: hand;
-      }
-      .left {
-        float: left;
-      }
-      .right {
-        float: right;
-      }
-      .clear {
-        clear: both;
-      }
-      .well {
-        padding: 10px;
-      }
+    <script type="text/javascript">
+      $(document).ready(function(){
+          var opts = {
+            title: 'Részletek',
+            content: "Ez a leiras a termekrol<br><b>Méret:</b> 25 x 25 cm",
+            animation: true,
+            placement: 'top'
+          }
+          $('.product-details').popover(opts);
 
-      .thumbnail {
-        margin-bottom: 10px;
-        background: #fff;
-      }
-      .thumbnail:hover {
-        background: #FFF2F2;
-      }
+          $('ul.nav li.sub').hide();
+          $('ul.nav li.nav-header').on("click", function(evt){
+              evt.preventDefault();
+              $(this).parent().find('li.sub').toggle();
+            });
+          });
+        </script>
+        <style type="text/css">
 
-      .orange {
-        color: #BA372C;
-      }
 
-      p {
-        margin: 0px;
-      }
-    </style>
+          @font-face {
+            font-family: 'OstrichSansMedium';
+            src: url('fonts/ostrich-regular-webfont.eot');
+            src: url('fonts/ostrich-regular-webfont.eot?#iefix') format('embedded-opentype'),
+            url('fonts/ostrich-regular-webfont.woff') format('woff'),
+            url('fonts/ostrich-regular-webfont.ttf') format('truetype'),
+            url('fonts/ostrich-regular-webfont.svg#OstrichSansMedium') format('svg');
+            font-weight: normal;
+            font-style: normal;
+          }
 
-  </head>
-  <body>
+          @font-face {
+            font-family: 'JungleFeverRegular';
+            src: url('fonts/JungleFever-webfont.eot');
+            src: url('fonts/JungleFever-webfont.eot?#iefix') format('embedded-opentype'),
+            url('fonts/JungleFever-webfont.woff') format('woff'),
+            url('fonts/JungleFever-webfont.ttf') format('truetype'),
+            url('fonts/JungleFever-webfont.svg#JungleFeverRegular') format('svg');
+            font-weight: normal;
+            font-style: normal;
+          }
 
-    <div class="container">
-      <div class="row">
-        <div class="span12">header</div>
-      </div>
 
-      <div class="row">
-        <div class="span3">
-          <div class="well">
-            <h3><span class="orange">K</span>osar</h3>
-            <table class="table">
-              <tr>
-                <td>Termek1</td>
-                <td>x 1</td>
-                <td>3 123</td>
-                <td>
-                  <a href="#" class="btn btn-danger btn-mini"><i class="icon-trash icon-white"> </i></a>
-                </td>
-              </tr>
-              <tr>
-                <td>Termek2</td>
-                <td>x 4</td>
-                <td>3 123</td>
-                <td>
-                  <a href="#" class="btn btn-danger btn-mini"><i class="icon-trash icon-white"> </i></a>
-                </td>
-              </tr>
-            </table>
-              <a href="#" class="btn btn-success btn-medium"><i class="icon-shopping-cart icon-white"> </i> Penztar</a>
-          </div>
-          <div class="well">
-            <h3><span class="orange">K</span>ereses</h3>
-            <div class="controls">
-              <div class="input-append">
-                <input type="text" size="18" class="span2"><button type="button" class="btn"><i class="icon-search icon-gray"> </i></button>
+          body {
+            background-image: url('img/groovepaper.png')
+          }
+
+          ul.menu {
+            list-style-type: none;
+          }
+
+          li.menu {
+            float: left;
+          }
+
+          ul.menu a {
+            padding-left: 20px;
+          }
+
+          .header {
+            margin-top: 5px;
+            margin-bottom: 10px;
+          }
+
+          h1.title {
+            font: 60px/68px 'JungleFeverRegular', Arial, sans-serif;
+            letter-spacing: 0;
+          }
+
+          .subtitle {
+            font: 20px 'JungleFeverRegular', Arial, sans-serif;
+            letter-spacing: 0px;
+          }
+
+          tr:hover {
+            background: #ffffff;
+          }
+
+          .table {
+            margin-bottom: 0px;
+          }
+          .left {
+            float: left;
+          }
+          .right {
+            float: right;
+          }
+          .clear {
+            clear: both;
+          }
+          .well {
+            padding: 10px;
+          }
+
+          .thumbnail {
+            margin-bottom: 5px;
+            background: #fff;
+          }
+
+          .thumbnail:hover {
+            background: #FFF2F2;
+          }
+
+          .orange {
+            color: #BA372C;
+            padding-bottom: 3px;
+          }
+
+          .category-title {
+            font: 20px 'JungleFeverRegular', Arial, sans-serif;letter-spacing: 0px;
+          }
+
+          .price {
+            margin-top: 10px; 
+            text-align: right; 
+            float: right;
+            font: 45px 'OstrichSansMedium', Arial, sans-serif;
+            letter-spacing: 0;
+          }
+
+          .menu {
+            margin-top: 5px;
+            letter-spacing: 0;
+          }
+
+          .caption {
+            float:left; 
+            width:150px;
+          }       
+
+          .thumbnail > .caption {
+            padding: 2px;
+          }
+
+          p {
+            margin: 0px;
+          }
+
+        </style>
+
+      </head>
+      <body>
+
+        <div class="container">
+          <div class="row">
+            <div class="span12 header">
+              <h1 class="title left"><span class="orange">Fa</span>CSiga <span class="subtitle">minden <span class="orange">AMI</span> fajáték</h1>
+                <ul class="menu right">
+                  <li class="menu"><a>Szállítási és fizetési feltételek</a></li>
+                  <li class="menu"><a>Garancia</a></li>
+                  <li class="menu"><a>Adatvédelem</a></li>
+                </ul>
               </div>
             </div>
 
-          </div>
-          <div class="well"><h3>kategoriak</h3></div>
-        </div>
-        <div class="span9">
-          <div class="products">
             <div class="row">
               <div class="span3">
-                <div class="thumbnail">
-                  <img alt="" src="http://placehold.it/260x180">
-                  <div class="caption">
-                    <h4 class="orange">Termek1</h4>
-                    <span class="price">3 200 Ft</span>
-                    <p><a class="btn btn-success btn-mini" href="#"><i class="icon-shopping-cart icon-white"> </i> Kosarba</a> 
-                    <a class="btn btn-info btn-mini" href="#">Reszletek</a></p>
-                  </div>
+                <div class="well">
+                  <h3 class="category-title"><span class="orange">K</span>osár</h3>
+                  <table class="table">
+                    <tr>
+                      <td>Termek1</td>
+                      <td>x 1</td>
+                      <td>3.123,-</td>
+                      <td>
+                        <a href="#" class="btn btn-danger btn-mini"><i class="icon-trash icon-white"> </i></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Termek2</td>
+                      <td>x 4</td>
+                      <td>3.123,-</td>
+                      <td>
+                        <a href="#" class="btn btn-danger btn-mini"><i class="icon-trash icon-white"> </i></a>
+                      </td>
+                    </tr>
+                  </table>
+                  <a href="#" class="btn btn-success btn-medium"><i class="icon-shopping-cart icon-white"> </i> Pénztár</a>
                 </div>
-              </div>
+                <div class="well">
+                  <h3 class="category-title"><span class="orange">K</span>eresés</h3>
+                  <div class="controls">
+                    <div class="input-append">
+                      <input type="text" size="18" class="span2"><button type="button" class="btn"><i class="icon-search icon-gray"> </i></button>
+                    </div>
+                  </div>
 
-              <div class="span3">
-                <div class="thumbnail">
-                  <img alt="" src="http://placehold.it/260x180">
-                  <div class="caption">
-                    <h4 class="orange">Termek1</h4>
-                    <span class="price">3 200 Ft</span>
-                    <p><a class="btn btn-success btn-mini" href="#"><i class="icon-shopping-cart icon-white"> </i> Kosarba</a> 
-                    <a class="btn btn-info btn-mini" href="#">Reszletek</a></p>
-                  </div>
                 </div>
-              </div>
-
-              <div class="span3">
-                <div class="thumbnail">
-                  <img alt="" src="http://placehold.it/260x180">
-                  <div class="caption">
-                    <h4 class="orange">Termek1</h4>
-                    <span class="price">3 200 Ft</span>
-                    <p><a class="btn btn-success btn-mini" href="#"><i class="icon-shopping-cart icon-white"> </i> Kosarba</a> 
-                    <a class="btn btn-info btn-mini" href="#">Reszletek</a></p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <div class="row">
-              <div class="span3">
-                <div class="thumbnail">
-                  <img alt="" src="http://placehold.it/260x180">
-                  <div class="caption">
-                    <h4 class="orange">Termek1</h4>
-                    <span class="price">3 200 Ft</span>
-                    <p><a class="btn btn-success btn-mini" href="#"><i class="icon-shopping-cart icon-white"> </i> Kosarba</a> 
-                    <a class="btn btn-info btn-mini" href="#">Reszletek</a></p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="span3">
-                <div class="thumbnail">
-                  <img alt="" src="http://placehold.it/260x180">
-                  <div class="caption">
-                    <h4 class="orange">Termek1</h4>
-                    <span class="price">3 200 Ft</span>
-                    <p><a class="btn btn-success btn-mini" href="#"><i class="icon-shopping-cart icon-white"> </i> Kosarba</a> 
-                    <a class="btn btn-info btn-mini" href="#">Reszletek</a></p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="span3">
-                <div class="thumbnail">
-                  <img alt="" src="http://placehold.it/260x180">
-                  <div class="caption">
-                    <h4 class="orange">Termek1</h4>
-                    <span class="price">3 200 Ft</span>
-                    <p><a class="btn btn-success btn-mini" href="#"><i class="icon-shopping-cart icon-white"> </i> Kosarba</a> 
-                    <a class="btn btn-info btn-mini" href="#">Reszletek</a></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="span9">
-                <div class="pagination">
-                  <ul>
-                    <li><a href="#">Elozo</a></li>
-                    <li class="active">
-                    <a href="#">1</a>
+                <div class="well">
+                  <h3 class="category-title"><span class="orange">T</span>ermékek</h3>
+                  <ul class="nav nav-list">
+                    <li>
+                    <a href="#"><b>Akcios ajanlatok</b></a>
                     </li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">Kovetkezo</a></li>
+                  </ul>
+                  <ul class="nav nav-list">
+                    <li class="nav-header">
+                    <a href="#">Fokategoria 1</a>
+                    </li>
+                    <li class="sub">
+                    <a href="#">Alkategoria 1</a>
+                    </li>
+                    <li class="sub">
+                    <a href="#">Alkategoria 2</a>
+                    </li>
+                  </ul>
+                  <ul class="nav nav-list">
+                    <li class="nav-header">
+                    <a href="#">Fokategoria 2</a>
+                    </li>
+                    <li class="sub">
+                    <a href="#">Alkategoria 3</a>
+                    </li>
+                    <li class="sub">
+                    <a href="#">Alkategoria 4</a>
+                    </li>
                   </ul>
                 </div>
               </div>
+              <div class="span9">
+                <div class="row">
+                  <div class="span9">
+                    <h4>FOKATEGORIA 1 / <span class="orange">Alkategoria 2</span></h4>
+                  </div>
+                </div>
+
+                <div class="products">
+                  <div class="row">
+                    <div class="span3">
+                      <div class="thumbnail">
+                        <img alt="" src="http://placehold.it/260x180">
+                        <div class="caption">
+                          <h4 style="min-height:35px" class="orange">A termek neve</h4>
+                          <p>
+                          <a class="btn btn-success btn-mini" href="#"><i class="icon-shopping-cart icon-white"> </i> Kosárba</a> 
+                          <a class="btn btn-info btn-mini product-details" href="#">Részletek</a>
+                          </p>
+                        </div>
+                        <div class="price">
+                          2.285,-
+                        </div>
+                        <div class="clear"></div>
+                      </div>
+                    </div>
+
+                    <div class="span3">
+                      <div class="thumbnail">
+                        <img alt="" src="http://placehold.it/260x180">
+                        <div class="caption">
+                          <h4 class="orange">A termek neve hosszu nagyon</h4>
+                          <p>
+                          <a class="btn btn-success btn-mini" href="#"><i class="icon-shopping-cart icon-white"> </i> Kosárba</a> 
+                          <a class="btn btn-info btn-mini product-details" href="#">Részletek</a>
+                          </p>
+                        </div>
+                        <div class="price">
+                          22.285,-
+                        </div>
+                        <div class="clear"></div>
+                      </div>
+                    </div>
+
+                    <div class="span3">
+                      <div class="thumbnail">
+                        <img alt="" src="http://placehold.it/260x180">
+                        <div class="caption">
+                          <h4 class="orange">A termek neve hosszu nagyon</h4>
+                          <p>
+                          <a class="btn btn-success btn-mini" href="#"><i class="icon-shopping-cart icon-white"> </i> Kosárba</a> 
+                          <a class="btn btn-info btn-mini" href="#">Részletek</a>
+                          </p>
+                        </div>
+                        <div class="price">
+                          22.285,-
+                        </div>
+                        <div class="clear"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="span3">
+                      <div class="thumbnail">
+                        <img alt="" src="http://placehold.it/260x180">
+                        <div class="caption">
+                          <h4 class="orange">A termek neve hosszu nagyon</h4>
+                          <p>
+                          <a class="btn btn-success btn-mini" href="#"><i class="icon-shopping-cart icon-white"> </i> Kosárba</a> 
+                          <a class="btn btn-info btn-mini" href="#">Részletek</a>
+                          </p>
+                        </div>
+                        <div class="price">
+                          22.285,-
+                        </div>
+                        <div class="clear"></div>
+                      </div>
+                    </div>
+
+                    <div class="span3">
+                      <div class="thumbnail">
+                        <img alt="" src="http://placehold.it/260x180">
+                        <div class="caption">
+                          <h4 class="orange">A termek neve hosszu nagyon</h4>
+                          <p>
+                          <a class="btn btn-success btn-mini" href="#"><i class="icon-shopping-cart icon-white"> </i> Kosárba</a> 
+                          <a class="btn btn-info btn-mini" href="#">Részletek</a>
+                          </p>
+                        </div>
+                        <div class="price">
+                          285,-
+                        </div>
+                        <div class="clear"></div>
+                      </div>
+                    </div>
+
+                    <div class="span3">
+                      <div class="thumbnail">
+                        <img alt="" src="http://placehold.it/260x180">
+                        <div class="caption">
+                          <h4 class="orange">A termek neve hosszu nagyon</h4>
+                          <p>
+                          <a class="btn btn-success btn-mini" href="#"><i class="icon-shopping-cart icon-white"> </i> Kosárba</a> 
+                          <a class="btn btn-info btn-mini" href="#">Részletek</a>
+                          </p>
+                        </div>
+                        <div class="price">
+                          22.285,-
+                        </div>
+                        <div class="clear"></div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="row">
+                    <div class="span3">
+                      <div class="thumbnail">
+                        <img alt="" src="http://placehold.it/260x180">
+                        <div class="caption">
+                          <h4 class="orange">A termek neve hosszu nagyon</h4>
+                          <p>
+                          <a class="btn btn-success btn-mini" href="#"><i class="icon-shopping-cart icon-white"> </i> Kosárba</a> 
+                          <a class="btn btn-info btn-mini" href="#">Részletek</a>
+                          </p>
+                        </div>
+                        <div class="price">
+                          22.285,-
+                        </div>
+                        <div class="clear"></div>
+                      </div>
+                    </div>
+
+                    <div class="span3">
+                      <div class="thumbnail">
+                        <img alt="" src="http://placehold.it/260x180">
+                        <div class="caption">
+                          <h4 class="orange">A termek neve hosszu nagyon</h4>
+                          <p>
+                          <a class="btn btn-success btn-mini" href="#"><i class="icon-shopping-cart icon-white"> </i> Kosárba</a> 
+                          <a class="btn btn-info btn-mini" href="#">Részletek</a>
+                          </p>
+                        </div>
+                        <div class="price">
+                          285,-
+                        </div>
+                        <div class="clear"></div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="row">
+                    <div class="span9">
+                      <div class="pagination">
+                        <ul>
+                          <li><a href="#">Elozo</a></li>
+                          <li class="active">
+                          <a href="#">1</a>
+                          </li>
+                          <li><a href="#">2</a></li>
+                          <li><a href="#">3</a></li>
+                          <li><a href="#">4</a></li>
+                          <li><a href="#">Kovetkezo</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
 
 
-  </body>
-</html>
+        </body>
+      </html>
