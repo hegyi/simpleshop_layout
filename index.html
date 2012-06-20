@@ -20,7 +20,7 @@
           $('ul.nav li.sub').hide();
           $('ul.nav li.nav-header').on("click", function(evt){
               evt.preventDefault();
-              $(this).parent().find('li.sub').toggle();
+              $(this).parent().find('li.sub').fadeToggle();
             });
           });
         </script>
@@ -96,7 +96,8 @@
           h1.title {
             font: 60px/68px 'JungleFeverRegular', Arial, sans-serif;
             letter-spacing: 0;
-            text-shadow: #fff 0em 0em 0.05em;
+            text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+
           }
 
           .subtitle {
@@ -217,9 +218,9 @@
                 </h1>
                 <div class="menubar right">
                   <ul class="menu">
-                    <li class="menu"><a>Szállítási és fizetési feltételek</a></li>
-                    <li class="menu"><a class="link">Garancia</a></li>
-                    <li class="menu"><a class="link">Adatvédelem</a></li>
+                    <li class="menu"><a href="">Szállítási és fizetési feltételek</a></li>
+                    <li class="menu"><a href="" class="link">Garancia</a></li>
+                    <li class="menu"><a href="" class="link">Adatvédelem</a></li>
                   </ul>
                 </div>
               </div>
@@ -263,6 +264,9 @@
                   <ul class="nav nav-list">
                     <li>
                     <a href="#"><b>Akcios ajanlatok</b></a>
+                    </li>
+                    <li>
+                    <a href="#"><b>Kemelt termekek</b></a>
                     </li>
                   </ul>
                   <ul class="nav nav-list">
