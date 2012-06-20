@@ -51,29 +51,52 @@
 
 
           body {
-            background-image: url('img/groovepaper.png')
+            background: #80B6ED;
+            background-image: url('img/bg.png');
+            background-repeat:repeat-x;
+          }
+
+          .content {
+            padding-top: 20px;
+            background: white;
+            border: 1px solid #043A6B;
+            border-radius: 5px;
+            background-image: url('img/groovepaper.png');
+          }
+
+          .menubar {
+            border: 1px solid #043A6B;
+            padding: 7px;
+            border-radius: 5px;
+            background-image: url('img/groovepaper.png');
+          }
+
+          .span3 {
+            width: 260px;
           }
 
           ul.menu {
             list-style-type: none;
+            margin: 0px;
           }
 
           li.menu {
             float: left;
           }
 
-          ul.menu a {
-            padding-left: 20px;
+          ul.menu .link {
+            padding-left: 15px;
           }
 
           .header {
             margin-top: 5px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
           }
 
           h1.title {
             font: 60px/68px 'JungleFeverRegular', Arial, sans-serif;
             letter-spacing: 0;
+            text-shadow: #fff 0em 0em 0.05em;
           }
 
           .subtitle {
@@ -115,11 +138,10 @@
           }
 
           .thumbnail:hover {
-            background: #FFF2F2;
+            background: #e1f1ff;
           }
 
-          .orange {
-            color: #BA372C;
+          .title-blue {
             padding-bottom: 3px;
           }
 
@@ -136,7 +158,6 @@
           }
 
           .menu {
-            margin-top: 5px;
             letter-spacing: 0;
           }
 
@@ -153,6 +174,35 @@
             margin: 0px;
           }
 
+          .title-blue {
+            color: #33b3d8;
+          }
+
+          .title-red {
+            color: #bb5455;
+          }
+
+          .title-yellow {
+            color: #f9cf0c;
+          }
+
+          .title-green {
+            color: #2cac2f;
+          }
+
+          .title-orange{
+            color: #fb9111;
+          }
+
+          .title-brown {
+            color: #a6601b;
+          }
+
+          .title-gray {
+            color: #7c7c7c;
+          }
+
+
         </style>
 
       </head>
@@ -161,19 +211,24 @@
         <div class="container">
           <div class="row">
             <div class="span12 header">
-              <h1 class="title left"><span class="orange">Fa</span>CSiga <span class="subtitle">minden <span class="orange">AMI</span> fajáték</h1>
-                <ul class="menu right">
-                  <li class="menu"><a>Szállítási és fizetési feltételek</a></li>
-                  <li class="menu"><a>Garancia</a></li>
-                  <li class="menu"><a>Adatvédelem</a></li>
-                </ul>
+              <h1 class="title left">
+                <span class="title-blue">F</span><span class="title-red">a</span><span class="title-yellow">C</span><span class="title-green">S</span><span class="title-orange">i</span><span class="title-brown">g</span><span class="title-gray">a</span>
+                <span class="subtitle">minden ami fajáték</span>
+                </h1>
+                <div class="menubar right">
+                  <ul class="menu">
+                    <li class="menu"><a>Szállítási és fizetési feltételek</a></li>
+                    <li class="menu"><a class="link">Garancia</a></li>
+                    <li class="menu"><a class="link">Adatvédelem</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
 
-            <div class="row">
+            <div class="row content">
               <div class="span3">
                 <div class="well">
-                  <h3 class="category-title"><span class="orange">K</span>osár</h3>
+                  <h3 class="category-title"><span class="title-blue">K</span>osár</h3>
                   <table class="table">
                     <tr>
                       <td>Termek1</td>
@@ -195,7 +250,7 @@
                   <a href="#" class="btn btn-success btn-medium"><i class="icon-shopping-cart icon-white"> </i> Pénztár</a>
                 </div>
                 <div class="well">
-                  <h3 class="category-title"><span class="orange">K</span>eresés</h3>
+                  <h3 class="category-title"><span class="title-red">K</span>eresés</h3>
                   <div class="controls">
                     <div class="input-append">
                       <input type="text" size="18" class="span2"><button type="button" class="btn"><i class="icon-search icon-gray"> </i></button>
@@ -204,7 +259,7 @@
 
                 </div>
                 <div class="well">
-                  <h3 class="category-title"><span class="orange">T</span>ermékek</h3>
+                  <h3 class="category-title"><span class="title-yellow">T</span>ermékek</h3>
                   <ul class="nav nav-list">
                     <li>
                     <a href="#"><b>Akcios ajanlatok</b></a>
@@ -237,7 +292,7 @@
               <div class="span9">
                 <div class="row">
                   <div class="span9 current-category">
-                    <h4>FOKATEGORIA 1 / <span class="orange"> Alkategoria 2</span></h4>
+                    <h4>FOKATEGORIA 1 / <span class="title-blue"> Alkategoria 2</span></h4>
                   </div>
                 </div>
 
@@ -247,7 +302,7 @@
                       <div class="thumbnail">
                         <img alt="" src="http://placehold.it/260x180">
                         <div class="product-content">
-                          <h4 style="min-height:35px" class="orange">A termek neve</h4>
+                          <h4 style="min-height:35px" class="title-blue">A termek neve</h4>
                           <p>
                           <a class="btn btn-success btn-mini" href="#"><i class="icon-shopping-cart icon-white"> </i> Kosárba</a> 
                           <a class="btn btn-info btn-mini product-details" href="#">Részletek</a>
@@ -264,7 +319,7 @@
                       <div class="thumbnail">
                         <img alt="" src="http://placehold.it/260x180">
                         <div class="product-content">
-                          <h4 class="orange">A termek neve hosszu nagyon</h4>
+                          <h4 class="title-blue">A termek neve hosszu nagyon</h4>
                           <p>
                           <a class="btn btn-success btn-mini" href="#"><i class="icon-shopping-cart icon-white"> </i> Kosárba</a> 
                           <a class="btn btn-info btn-mini product-details" href="#">Részletek</a>
@@ -281,7 +336,7 @@
                       <div class="thumbnail">
                         <img alt="" src="http://placehold.it/260x180">
                         <div class="product-content">
-                          <h4 class="orange">A termek neve hosszu nagyon</h4>
+                          <h4 class="title-blue">A termek neve hosszu nagyon</h4>
                           <p>
                           <a class="btn btn-success btn-mini" href="#"><i class="icon-shopping-cart icon-white"> </i> Kosárba</a> 
                           <a class="btn btn-info btn-mini" href="#">Részletek</a>
@@ -300,7 +355,7 @@
                       <div class="thumbnail">
                         <img alt="" src="http://placehold.it/260x180">
                         <div class="product-content">
-                          <h4 class="orange">A termek neve hosszu nagyon</h4>
+                          <h4 class="title-blue">A termek neve hosszu nagyon</h4>
                           <p>
                           <a class="btn btn-success btn-mini" href="#"><i class="icon-shopping-cart icon-white"> </i> Kosárba</a> 
                           <a class="btn btn-info btn-mini" href="#">Részletek</a>
@@ -317,7 +372,7 @@
                       <div class="thumbnail">
                         <img alt="" src="http://placehold.it/260x180">
                         <div class="product-content">
-                          <h4 class="orange">A termek neve hosszu nagyon</h4>
+                          <h4 class="title-blue">A termek neve hosszu nagyon</h4>
                           <p>
                           <a class="btn btn-success btn-mini" href="#"><i class="icon-shopping-cart icon-white"> </i> Kosárba</a> 
                           <a class="btn btn-info btn-mini" href="#">Részletek</a>
@@ -334,7 +389,7 @@
                       <div class="thumbnail">
                         <img alt="" src="http://placehold.it/260x180">
                         <div class="product-content">
-                          <h4 class="orange">A termek neve hosszu nagyon</h4>
+                          <h4 class="title-blue">A termek neve hosszu nagyon</h4>
                           <p>
                           <a class="btn btn-success btn-mini" href="#"><i class="icon-shopping-cart icon-white"> </i> Kosárba</a> 
                           <a class="btn btn-info btn-mini" href="#">Részletek</a>
@@ -349,42 +404,6 @@
 
                   </div>
 
-                  <div class="row">
-                    <div class="span3">
-                      <div class="thumbnail">
-                        <img alt="" src="http://placehold.it/260x180">
-                        <div class="product-content">
-                          <h4 class="orange">A termek neve hosszu nagyon</h4>
-                          <p>
-                          <a class="btn btn-success btn-mini" href="#"><i class="icon-shopping-cart icon-white"> </i> Kosárba</a> 
-                          <a class="btn btn-info btn-mini" href="#">Részletek</a>
-                          </p>
-                        </div>
-                        <div class="price">
-                          22.285,-
-                        </div>
-                        <div class="clear"></div>
-                      </div>
-                    </div>
-
-                    <div class="span3">
-                      <div class="thumbnail">
-                        <img alt="" src="http://placehold.it/260x180">
-                        <div class="product-content">
-                          <h4 class="orange">A termek neve hosszu nagyon</h4>
-                          <div>
-                          <a class="btn btn-success btn-mini" href="#"><i class="icon-shopping-cart icon-white"> </i> Kosárba</a> 
-                          <a class="btn btn-info btn-mini" href="#">Részletek</a>
-                          </div>
-                        </div>
-                        <div class="price">
-                          285,-
-                        </div>
-                        <div class="clear"></div>
-                      </div>
-                    </div>
-
-                  </div>
 
                   <div class="row">
                     <div class="span9">
